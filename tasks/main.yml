@@ -1,0 +1,51 @@
+---
+- name: Install unarchivedeps
+  ansible.builtin.include_role:
+    name: andrewrothstein.unarchivedeps
+- name: Resolve platform specific vars
+  ansible.builtin.include_vars: '{{ item }}'
+  with_first_found:
+    - files:
+        - '{{ ansible_distribution }}-{{ ansible_distribution_release }}.yml'
+        - '{{ ansible_distribution }}.yml'
+        - '{{ ansible_os_family }}.yml'
+      skip: true
+      paths:
+        - '{{ role_path }}/vars'
+- name: Look for install at {{ rclone_exe }}
+  ansible.builtin.stat:
+    path: '{{ rclone_exe }}'
+  register: rclone_binary
+- name: Downloading and installing rclone
+  when: not rclone_binary.stat.exists
+  block:
+    - name: Downloading {{ rclone_url }} to {{ rclone_tmp_archive }}
+      become: true
+      become_user: root
+      ansible.builtin.get_url:
+        url: '{{ rclone_url }}'
+        dest: '{{ rclone_tmp_archive }}'
+        mode: '644'
+        checksum: '{{ rclone_checksum }}'
+    - name: Unarchive {{ rclone_tmp_archive }} to {{ rclone_parent_install_dir }}
+      become: true
+      become_user: root
+      ansible.builtin.unarchive:
+        remote_src: true
+        src: '{{ rclone_tmp_archive }}'
+        dest: '{{ rclone_parent_install_dir }}'
+        creates: '{{ rclone_exe }}'
+  always:
+    - name: Rm {{ rclone_tmp_archive }}
+      become: true
+      become_user: root
+      ansible.builtin.file:
+        path: '{{ rclone_tmp_archive }}'
+        state: absent
+- name: Linking {{ rclone_link }} to {{ rclone_exe }}
+  become: true
+  become_user: root
+  ansible.builtin.file:
+    src: '{{ rclone_exe }}'
+    dest: '{{ rclone_link }}'
+    state: link

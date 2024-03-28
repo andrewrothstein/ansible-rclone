@@ -1,0 +1,13 @@
+---
+# vars file for rclone
+rclone_os: '{{ rclone_os_map[ansible_system] }}'
+rclone_arch: '{{ rclone_arch_map[ansible_architecture] }}'
+rclone_platform: '{{ rclone_os }}-{{ rclone_arch }}'
+rclone_name: rclone-v{{ rclone_ver }}-{{ rclone_platform }}
+rclone_archive: '{{ rclone_name }}.zip'
+rclone_url: '{{ rclone_mirror }}/v{{ rclone_ver }}/{{ rclone_archive }}'
+rclone_checksum: '{{ rclone_checksums[rclone_ver][rclone_platform] }}'
+rclone_tmp_archive: '{{ rclone_tmp_dir | default("/tmp") }}/{{ rclone_archive }}'
+rclone_install_dir: '{{ rclone_parent_install_dir }}/{{ rclone_name }}'
+rclone_exe: '{{ rclone_install_dir }}/rclone'
+rclone_link: '{{ rclone_parent_install_dir }}/bin/rclone'

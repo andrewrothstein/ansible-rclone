@@ -1,0 +1,14 @@
+---
+- name: Testing andrewrothstein.rclone role
+  hosts: all
+  tasks:
+    - name: Installing andrewrothstein.rclone
+      ansible.builtin.include_role:
+        name: '{{ playbook_dir }}'
+    - name: Executing 'rclone --version'
+      ansible.builtin.command: rclone --version
+      changed_when: false
+      register: 'rclone_test_output'
+    - name: Output from 'rclone --version'
+      ansible.builtin.debug:
+        msg: '{{ rclone_test_output.stdout }}'
