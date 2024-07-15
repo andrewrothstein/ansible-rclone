@@ -1,6 +1,6 @@
 ---
 # defaults file for rclone
-rclone_ver: 1.66.0
+rclone_ver: 1.67.0
 rclone_parent_install_dir: /usr/local
 rclone_os_map:
   Linux: linux
@@ -71,3 +71,61 @@ rclone_checksums:
     windows-amd64: sha256:8e8bb13fb0d7beb316487ecde8ead5426784cdcdbf8b4d8dd381c6fe8c7d92a0
     # https://github.com/rclone/rclone/releases/download/v1.66.0/rclone-v1.66.0-windows-arm64.zip
     windows-arm64: sha256:4e815350382249ffb6d9520262bbce81f45f63126134a0c365eb648a4d27e6ea
+  # https://github.com/rclone/rclone/releases/download/v1.67.0/SHA256SUMS
+  1.67.0:
+    # https://github.com/rclone/rclone/releases/download/v1.67.0/rclone-v1.67.0-freebsd-386.zip
+    freebsd-386: sha256:22dec13f1013b2da0ec52eefe16d35ab027a29ea82c596154714c331ef01453f
+    # https://github.com/rclone/rclone/releases/download/v1.67.0/rclone-v1.67.0-freebsd-amd64.zip
+    freebsd-amd64: sha256:0f620bc9e35e86b8a8ba5ce522f2ff3093f825b8d96057b7c54e52f9241002c7
+    # https://github.com/rclone/rclone/releases/download/v1.67.0/rclone-v1.67.0-freebsd-arm-v6.zip
+    freebsd-arm-v6: sha256:031058faff9335052b9be0437342442bc4c67d1fe9e8c179a78ba54b92f2480a
+    # https://github.com/rclone/rclone/releases/download/v1.67.0/rclone-v1.67.0-freebsd-arm-v7.zip
+    freebsd-arm-v7: sha256:38a98cc77a24b59f8f7c9fb34901dc655ce7296aebd865aee48fb5f33c953f9e
+    # https://github.com/rclone/rclone/releases/download/v1.67.0/rclone-v1.67.0-freebsd-arm.zip
+    freebsd-arm: sha256:007249202d5840829342cc6597fbff75d446910027417b1d49e94c7485774c7a
+    # https://github.com/rclone/rclone/releases/download/v1.67.0/rclone-v1.67.0-linux-386.zip
+    linux-386: sha256:d4284fe74349d67fb89076845ce27d80a378d35b76622a57e32581ea1226859f
+    # https://github.com/rclone/rclone/releases/download/v1.67.0/rclone-v1.67.0-linux-amd64.zip
+    linux-amd64: sha256:07c23d21a94d70113d949253478e13261c54d14d72023bb14d96a8da5f3e7722
+    # https://github.com/rclone/rclone/releases/download/v1.67.0/rclone-v1.67.0-linux-arm64.zip
+    linux-arm64: sha256:2b44981a1a7d1f432c53c0f2f0b6bcdd410f6491c47dc55428fdac0b85c763f1
+    # https://github.com/rclone/rclone/releases/download/v1.67.0/rclone-v1.67.0-linux-arm.zip
+    linux-arm: sha256:02032f5eb062c4bd0631329f1d4b4841ae773dfa3b8c7f8fd60d35f256c86532
+    # https://github.com/rclone/rclone/releases/download/v1.67.0/rclone-v1.67.0-linux-arm-v6.zip
+    linux-arm-v6: sha256:0ad89df3db2ab0dbbfe6e7e0f943d7c57154119d1f8c3be80b7254780ab7c5ac
+    # https://github.com/rclone/rclone/releases/download/v1.67.0/rclone-v1.67.0-linux-arm-v7.zip
+    linux-arm-v7: sha256:b6d0f1d60596d87349f81aff517a1c340b16e68a68d72fbb568307a8a8e0a7e8
+    # https://github.com/rclone/rclone/releases/download/v1.67.0/rclone-v1.67.0-linux-mipsle.zip
+    linux-mipsle: sha256:468a7286eb3df5e54e711ed56796e0b5d2ffe1d237677d4318c26b5f20f265d2
+    # https://github.com/rclone/rclone/releases/download/v1.67.0/rclone-v1.67.0-linux-mips.zip
+    linux-mips: sha256:8c589958321e847159b4c7cb3ada26e6039fffbc26a5bb6d85f34be77e136394
+    # https://github.com/rclone/rclone/releases/download/v1.67.0/rclone-v1.67.0-netbsd-386.zip
+    netbsd-386: sha256:96cbd0021e8b4b1e95aac299b5ec1209877d84db49f71beb16358f0f2f908953
+    # https://github.com/rclone/rclone/releases/download/v1.67.0/rclone-v1.67.0-netbsd-amd64.zip
+    netbsd-amd64: sha256:7a742a163154666a06b24105445d36476196accfae8c96909696445b0e988f2f
+    # https://github.com/rclone/rclone/releases/download/v1.67.0/rclone-v1.67.0-netbsd-arm-v6.zip
+    netbsd-arm-v6: sha256:acf88c75a45f352e8f45edcfd48115fec5fd3ead08c18e2e9029a812e06d4fa8
+    # https://github.com/rclone/rclone/releases/download/v1.67.0/rclone-v1.67.0-netbsd-arm-v7.zip
+    netbsd-arm-v7: sha256:705377a7e00904ccdc2e5ab9c3440ca366756b2b74ea107ecf51aefaeb0164c2
+    # https://github.com/rclone/rclone/releases/download/v1.67.0/rclone-v1.67.0-netbsd-arm.zip
+    netbsd-arm: sha256:f77af8dc5c2df9249cf89a4feaa8ac210051c22ec74e0eb89a947c049b53c494
+    # https://github.com/rclone/rclone/releases/download/v1.67.0/rclone-v1.67.0-openbsd-386.zip
+    openbsd-386: sha256:2ae5e02519c7da40c09e81ab02be9151336872b3f65cb39a917d53fa742d9241
+    # https://github.com/rclone/rclone/releases/download/v1.67.0/rclone-v1.67.0-openbsd-amd64.zip
+    openbsd-amd64: sha256:58656a39bbc9b0783409bf1bb86c17591e16b49158deac844de7ddddeea1374f
+    # https://github.com/rclone/rclone/releases/download/v1.67.0/rclone-v1.67.0-osx-amd64.zip
+    osx-amd64: sha256:1a1a3b080393b721ba5f38597305be2dbac3b654b43dfac3ebe4630b4e6406c3
+    # https://github.com/rclone/rclone/releases/download/v1.67.0/rclone-v1.67.0-osx-arm64.zip
+    osx-arm64: sha256:4dc6142aea78bb86f1236fe38e570b715990503c09733418c0cd2300e45651e4
+    # https://github.com/rclone/rclone/releases/download/v1.67.0/rclone-v1.67.0-plan9-386.zip
+    plan9-386: sha256:5cedb2be0214c177fd47bf230b841ede60a2a6f688ffbc11bae03bac311c4e97
+    # https://github.com/rclone/rclone/releases/download/v1.67.0/rclone-v1.67.0-plan9-amd64.zip
+    plan9-amd64: sha256:dc91864dd189d8c80a0af5d1ec1078cf26fd921967938a04e55fbf1987871944
+    # https://github.com/rclone/rclone/releases/download/v1.67.0/rclone-v1.67.0-solaris-amd64.zip
+    solaris-amd64: sha256:52d8411745d949cc0cfd878f2e14f5f570d8a8d794eba6c3cf985a4aa51a1240
+    # https://github.com/rclone/rclone/releases/download/v1.67.0/rclone-v1.67.0-windows-386.zip
+    windows-386: sha256:458413bdd7a85cb8a19a7f955e25ac633fe1513f956b6bc09efd5ca51d44aa8a
+    # https://github.com/rclone/rclone/releases/download/v1.67.0/rclone-v1.67.0-windows-amd64.zip
+    windows-amd64: sha256:117b99441024607d6043e274c7fcbed64d07ad87347d17dd0a717bdc1c59716b
+    # https://github.com/rclone/rclone/releases/download/v1.67.0/rclone-v1.67.0-windows-arm64.zip
+    windows-arm64: sha256:54f263712d02bf2345eb5a3444aa4f07b990f5b4c6d02f1de892d1ff8028b50c
